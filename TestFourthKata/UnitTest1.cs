@@ -12,8 +12,8 @@ namespace TestFourthKata
         [SetUp]
         public void Setup()
         {
-            _sut = new CitiesSearcher();
             _listCities = new DBCities();
+            _sut = new CitiesSearcher(_listCities);            
         }
 
         [Test]

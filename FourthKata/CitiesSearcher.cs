@@ -8,10 +8,9 @@ namespace FourthKata
     public class CitiesSearcher : ICitiesSearcher
     {
         public List<string> CityList { get; set; }
-        public CitiesSearcher()
-        {
-            var cities = new DBCities();
-            CityList = cities.CitiesList;
+        public CitiesSearcher(DBCities db)
+        {            
+            CityList = db.CitiesList;
         }
         public List<string> SearchCity(string search)
         {
