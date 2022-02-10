@@ -5,12 +5,12 @@ using System.Text;
 
 namespace FourthKata
 {
-    public class SearchCities : ISearchCity
+    public class CitiesSearcher : ICitiesSearcher
     {
         public List<string> CityList { get; set; }
-        public SearchCities()
+        public CitiesSearcher()
         {
-            var cities = new Cities();
+            var cities = new DBCities();
             CityList = cities.CitiesList;
         }
         public List<string> SearchCity(string search)

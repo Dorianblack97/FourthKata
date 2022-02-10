@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FourthKata
 {
-    public interface ISearchCity
+    public interface ICitiesSearcher
     {
         List<string> SearchCity(string search);        
     }
